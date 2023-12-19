@@ -1,0 +1,41 @@
+# Searchable Checkbox List
+
+<Description
+  importExample="import { SearchableCheckboxList } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/SearchableCheckboxList/SearchableCheckboxList.tsx',
+  }}
+>
+  Renders a list of active and inactive checkboxes, with a filtering input and a
+  submit button
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed
+  storyId="3-custom-components-searchablecheckboxlist--docs"
+  height="1000"
+/>
+
+## Props
+
+`T` extends [`ICheckbox`](./icheckbox).
+
+| Name          | Type                        | Default               | Description                          |
+| ------------- | --------------------------- | --------------------- | ------------------------------------ |
+| checkboxes    | [`T[]`](#icheckbox)         | `[]`                  | Array of active/inactive checkboxes  |
+| buttonLabel   | `string`                    | `"Validate changes"`  | Label of submit button               |
+| onClickButton | `(checkboxes: T[]) => void` | `-`                   | Called when submit button is clicked |
+| placeholder   | `string`                    | `"Search in options"` | Placeholder of the search input      |
+
+### `ICheckbox`
+
+| Attribute         | Type               | Description                                        |
+| ----------------- | ------------------ | -------------------------------------------------- |
+| id <Required/>    | `number \| string` | ID of checkbox                                     |
+| label <Required/> | `string`           | Label of checkbox                                  |
+| active            | `boolean`          | Indicates if the checkbox is active/checked or not |

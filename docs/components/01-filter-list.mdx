@@ -1,0 +1,43 @@
+# Filter List
+
+<Description
+  extendsInfo={[
+    {
+      label: 'Stack',
+      link: 'https://v6.mantine.dev/core/stack/',
+    },
+  ]}
+  importExample="import { FilterList } from '@smile/react-front-kit';"
+  packageInfo={{
+    label: '@smile/react-front-kit',
+    link: 'https://www.npmjs.com/package/@smile/react-front-kit',
+  }}
+  sourceInfo={{
+    link: 'https://github.com/Smile-SA/react-front-kit/blob/main/packages/react-front-kit/src/Components/FilterList/FilterList.tsx',
+  }}
+>
+  Renders a list of active filters, with a button to open a modal and manage
+  which filters are active/displayed in the list, and an optional submit button
+</Description>
+
+## Storybook Docs
+
+<StorybookEmbed storyId="3-custom-components-filterlist--docs" height="1000" />
+
+## Props
+
+`T` extends [`ICheckbox`](./icheckbox).
+
+| Name                               | Type                                                                        | Default               | Description                                                                                                       |
+| ---------------------------------- | --------------------------------------------------------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| filters <Required/>                | [`IFilter[]`](../shared-types/filters#ifilter)                              | `[]`                  | Array of filters to display, and to show in the filter manager modal                                              |
+| direction                          | `"row" \| "column"`                                                         | `-`                   | TODO: change this                                                                                                 |
+| filtersManageLabel                 | `string`                                                                    | `"Manage filters"`    | Label of button to open filter management                                                                         |
+| manageFilterModalSearchPlaceholder | `string`                                                                    | `"Search in filters"` | Placeholder of search input in filter manager modal                                                               |
+| manageFilterModalSearchSubmit      | `string`                                                                    | `"Confirm changes"`   | Label of submit button in filter manager modal                                                                    |
+| manageFilterModalTitle             | `string`                                                                    | `"Manage filters"`    | Title of filter manager modal                                                                                     |
+| submitLabel                        | `string`                                                                    | `"Filter"`            | Label of optional submit button                                                                                   |
+| onActiveFiltersChange              | `(filters: `[`IFilter[]`](../shared-types/filters#ifilter)`) => void`       | `-`                   | Called when active filters change, when which filters are active/inactive is modified in the filter manager modal |
+| onSubmit                           | `(activeFilters: `[`IFilter[]`](../shared-types/filters#ifilter)`) => void` | `-`                   | Called when optional submit button is clicked, submit button is only displayed when this prop is not undefined    |
+| modalProps                         | [`ModalProps`](https://v6.mantine.dev/core/modal/?t=props)                  | `-`                   | Extra props for the Mantine [Modal](https://v6.mantine.dev/core/modal/)                                           |
+| ...                                |                                                                             | `-`                   | extends [Stack props](https://v6.mantine.dev/core/stack/?t=props)                                                 |
